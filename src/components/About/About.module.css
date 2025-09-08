@@ -1,0 +1,102 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.intro h1, span {
+    margin-bottom: -0.3em;
+    color: #8A2BE2;
+    background-color: var(--color-text);
+    text-align: center;
+}
+
+.apresentacao {
+    width: 45em;
+    
+}
+
+.apresentacao h1 {
+    color: #fff;
+}
+
+.apresentacao span {
+    color: #8A2BE2;
+}
+
+.img_perfil img {
+    width: 20em;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 20px 24px rgba(0, 0, 0, 0.4);
+}
+
+.buttons {
+    margin-top: -2em;
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #8A2BE2;
+    cursor: pointer;
+}
+
+button a {
+  color: #8A2BE2;
+  text-decoration: none;
+  
+  size: bold;
+}
+
+.buttons_rosa a {
+    color: #fff;
+}
+
+.buttons_rosa {
+    color: #fff;
+    border: none;
+    background: linear-gradient(106deg,rgba(135, 48, 176, 1) 21%, rgba(150, 48, 125, 1) 79%);
+}
+
+.container_dois {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+    background-color: #483D8B;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.icon {
+    width: 3.6em;
+    height: 3.6em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #4E4466;
+}
+
+.container_tres {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

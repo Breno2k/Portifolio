@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 10em;
-    margin-right: 10em;
+    /* margin-left: 10em;
+    margin-right: 10em; */
 }
 
 .container {

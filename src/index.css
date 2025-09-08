@@ -6,7 +6,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background: #000000;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(77, 48, 150, 1) 69%, rgba(255, 0, 0, 1) 100%);
+ background: linear-gradient(27deg,rgba(72, 61, 139, 1) 0%, rgba(0, 0, 0, 1) 54%, rgba(138, 43, 226, 1) 100%);
+  --color-text: linear-gradient(185deg,rgba(149, 0, 166, 1) 9%, rgba(77, 48, 150, 1) 54%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +16,8 @@
 }
 
 body {
-  margin: 0;
+  margin-left: 15em;
+  margin-right: 15em;
   padding: 0;
 }
 
