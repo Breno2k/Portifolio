@@ -1,29 +1,34 @@
 .nav {
-    display: flex;
-    justify-content: space-between; /* separa span e ul */
-    align-items: center;
-    background-color: #000;
-    border-bottom: 1px solid #363636;
-    padding: 0.1em 1em;
-    text-decoration: none;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between; /* separa span e ul */
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #363636;
+  padding: 0.1em 1em;
+  text-decoration: none;
 }
 
 .nav span {
-    color: 	#8A2BE2;
-    font-weight: bold;
-    margin-left: 6em;
+  color: 	#8A2BE2;
+  font-weight: bold;
+  margin-left: 6em;
 }
 
 .nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-right: 6em;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 6em;
 }
 
 .nav li {
-    margin-right: 2.3em;
-    cursor: pointer;
+  margin-right: 2.3em;
+  cursor: pointer;
 }
 
 .navLink {
