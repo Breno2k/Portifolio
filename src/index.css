@@ -1,12 +1,16 @@
-:root {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: #000000;
- background: linear-gradient(27deg,rgba(72, 61, 139, 1) 0%, rgba(0, 0, 0, 1) 54%, rgba(138, 43, 226, 1) 100%);
+  color: rgba(255, 255, 255, 0.87) !important;
+  background: #000000 !important;
+  background: linear-gradient(27deg,rgba(72, 61, 139, 1) 0%, rgba(0, 0, 0, 1) 54%, rgba(138, 43, 226, 1) 100%) !important;
   --color-text: linear-gradient(185deg,rgba(149, 0, 166, 1) 9%, rgba(77, 48, 150, 1) 54%);
 
   font-synthesis: none;
@@ -15,13 +19,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+.main-container {
   margin-left: 15em;
   margin-right: 15em;
-  padding: 0;
 }
 
 a {
-  
   text-decoration: none;
 }
