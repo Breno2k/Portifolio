@@ -1,0 +1,43 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 40em;
+    margin: 0 auto;
+}
+
+.intro h1 {
+  color: #8A2BE2;
+}
+
+.cards_container {
+  display: flex; 
+  width: 100%;
+  align-items: stretch;
+  gap: 20px; 
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-direction: column; 
+    padding: 1px;
+    background-color: #483D8B;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.card p, h4 {
+  margin-top: 1rem;
+}
