@@ -15,11 +15,14 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home id="#home" />
-      <About id="#about" />
-      <Projects id="#project" />
-      <Contact id="#contact" />
+      <div className="main-container">
+        <Navbar />
+        <Home id="#home" />
+        <About id="#about" />
+        <Projects id="#project" />
+        <Contact id="#contact" />
+      </div>
+
     </>
   )
 }

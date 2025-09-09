@@ -10,9 +10,10 @@ import { FaCode } from "react-icons/fa6";
 import { FiStar } from "react-icons/fi";
 import { GrCertificate } from "react-icons/gr";
 import { GiSandsOfTime } from "react-icons/gi";
+import { MdOutlineLanguage } from "react-icons/md";
 
 const About = () => {
-    return <>
+    return <div className={styles.about}>
         <div className={styles.intro}>
             <h1>Sobre mim</h1>
             <p><span><FiStar /></span> Transformando ideias em experiências digitais. <span><FiStar /></span></p>
@@ -59,7 +60,7 @@ const About = () => {
                     </div>
                     <h1>11</h1>
                 </div>
-                <h3>Total de Projetos</h3>
+                <h4>Total de Projetos</h4>
                 <p>Soluções web inovadoras. </p>
             </div>
             <div className={styles.card}>
@@ -69,22 +70,22 @@ const About = () => {
                     </div>
                     <h1>11</h1>
                 </div>
-                <h3>Certificados</h3>
+                <h4>Certificados</h4>
                 <p>Validação de habilidades profissionais. </p>
             </div>
             <div className={styles.card}>
                 <div className={styles.container_tres}>
                     <div className={styles.icon}>
-                        <GiSandsOfTime size={30} />
+                        <MdOutlineLanguage size={30} />
                     </div>
                     <h1>11</h1>
                 </div>
-                <h3>Anos de Experiência</h3>
+                <h4>Anos de Experiência</h4>
                 <p>Jornadas de aprendizado contínuo </p>
             </div>
         </div>
 
-    </>
+    </div>
 
 
 
