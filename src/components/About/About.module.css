@@ -7,19 +7,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
+}
+
+.intro h1 {
+    font-size: 3vw;
+    size: bold;
+}
+
+.intro h1, span {
+    color: #8A2BE2;
+    background-color: var(--color-text);
+    text-align: center;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content:space-between;
-}
-
-.intro h1, span {
-    /* margin-bottom: -0.3em; */
-    color: #8A2BE2;
-    background-color: var(--color-text);
-    text-align: center;
 }
 
 .apresentacao {
@@ -40,10 +45,6 @@
     height: auto;
     border-radius: 50%;
     box-shadow: 0 20px 24px rgba(0, 0, 0, 0.4);
-}
-
-.buttons {
-    margin-top: -2em;
 }
 
 button {
@@ -74,7 +75,7 @@ button a {
 }
 
 .container_dois {
-    margin-top: 15px;
+    margin-top: 3rem;
     display: flex;
     width: 100%;
     gap: 20px;
