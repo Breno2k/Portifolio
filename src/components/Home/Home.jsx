@@ -1,7 +1,7 @@
 import styles from './Home.module.css'
 import { FaGithub } from "react-icons/fa6";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
-import img1 from '../../assets/astronauta.png'
+import img1 from '../../assets/imagens/astronauta.png'
 
 
 const Home = () => {

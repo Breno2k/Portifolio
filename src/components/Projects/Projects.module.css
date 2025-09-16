@@ -38,11 +38,12 @@
     justify-content: space-between;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .container:hover {
   background-color: #7264ca;
+  transform: translateY(-2px);
 }
 
 .card {
@@ -59,4 +60,42 @@
 .active {
   background-color: #6d0083; /* cor quando clicado/ativo */
   font-weight: bold;
+}
+
+.limite {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* número máximo de linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+img {
+  height: 14rem;
+  width: auto;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.card_projects {
+  background-color: #452c63;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details a {
+  color: #1E90FF;
+  font-style: italic;
+}
+
+.details button {
+  background-color: #33006F;
+  border: none;
+}
+
+.details button a {
+  color: #fff;
 }

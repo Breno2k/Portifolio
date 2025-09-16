@@ -1,6 +1,6 @@
 import styles from './About.module.css'
 
-import img from '../../assets/perfil.jpg'
+import img from '../../assets/imagens/perfil.jpg'
 
 import { Link } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const About = () => {
         <div className={styles.container}>
             <div className={styles.apresentacao}>
                 <h1><span>Olá, eu sou</span><br /> Breno Lucas Souza de Albuquerque Melo</h1>
-                <p>Sou graduando em Análise e
+                <p>Sou graduado em Análise e
                     Desenvolvimento de Sistemas e já
                     atuei como desenvolvedor de
                     automações e agentes de inteligência
