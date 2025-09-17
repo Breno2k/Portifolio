@@ -2,13 +2,11 @@ import './App.css'
 
 // Components
 import Navbar from './components/navbar/Navbar'
-import About from './components/About/About'
-import Projects from './components/Projects/Projects'
-import Contact from './components/Contact/Contact'
-import Home from './components/Home/Home'
 
-// Hooks
-import { Route, Routes } from 'react-router-dom'
+// Sections
+import About from './sections/About/About'
+import Projects from './sections/Projects/Projects'
+import Home from './sections/Home/Home'
 
 function App() {
 
@@ -17,12 +15,25 @@ function App() {
     <>
       <div className="main-container">
         <Navbar />
-        <Home id="#home" />
-        <About id="#about" />
-        <Projects id="#project" />
-        <Contact id="#contact" />
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#mainNav"
+          data-bs-offset="80"
+          data-bs-smooth-scroll="true"
+          className="scrollspy-example"
+          tabIndex="0"
+        >
+          <section id="home">
+            <Home />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="project">
+            <Projects />
+          </section>
+        </div>
       </div>
-
     </>
   )
 }

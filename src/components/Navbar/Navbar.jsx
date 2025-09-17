@@ -1,31 +1,19 @@
 import styles from './Navbar.module.css'
-import { NavLink, Link } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav className={styles.nav}>
-            <span>Breno</span>
-            <ul>
-                <li><NavLink
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
-                    }
-                    to="/">Home</NavLink></li>
-                <li><NavLink
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
-                    }
-                    to="/about">Sobre mim</NavLink></li>
-                <li><NavLink
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
-                    }
-                    to="/projects">Projetos e Competências</NavLink></li>
-                <li><NavLink
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
-                    }
-                    to="/contact">Contato</NavLink></li>
+        <nav id="mainNav" className={`${styles.nav} navbar`}>
+            <span><a href="#home">Breno</a></span>
+            <ul className="nav">
+                <li className="nav-item">
+                    <a className={`nav-link ${styles.navLink}`} href="#home">Home</a>
+                </li>
+                <li className="nav-item">
+                    <a className={`nav-link ${styles.navLink}`} href="#about">Sobre mim</a>
+                </li>
+                <li className="nav-item">
+                    <a className={`nav-link ${styles.navLink}`} href="#project">Projetos e Competências</a>
+                </li>
             </ul>
         </nav>
     )

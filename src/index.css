@@ -27,3 +27,53 @@ body {
 a {
   text-decoration: none;
 }
+
+.nav-link,
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus,
+.nav-link:focus-visible {
+  color: #fff !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* pseudo-barra (hover) */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #8A2BE2;
+  transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* se você quiser que o estado active tenha cor roxa */
+.nav-link.active {
+  color: #8A2BE2 !important;
+}
+
+@keyframes slideLine {
+  from {
+    width: 0%;
+    right: 100%;
+  }
+  to {
+    width: 100%;
+    right: 0;
+  }
+}
