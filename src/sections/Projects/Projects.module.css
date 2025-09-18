@@ -93,10 +93,24 @@ img {
 }
 
 .details button {
+  display: inline-flex;
   background-color: #33006F;
+  padding: 5px 10px;
+  gap: 5px;
+  align-items: center; 
+  border-radius: 8px;
   border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
 }
 
-.details button a {
-  color: #fff;
+button:hover {  
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+
+button::after {
+  transform: scale(-0.95);
+  transition: 0.3s ease;
 }

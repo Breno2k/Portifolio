@@ -16,6 +16,14 @@
     size: bold;
 }
 
+.intro p {
+    display: flex;
+  align-items: center; /* centraliza ícones verticalmente */
+  justify-content: center; /* opcional, centraliza o conteúdo horizontalmente */
+  gap: 8px; /* espaço entre texto e ícones */
+  font-size: 18px;
+}
+
 .intro h1, span {
     color: #8A2BE2;
     background-color: var(--color-text);
@@ -41,6 +49,11 @@
     color: #8A2BE2;
 }
 
+p span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .img_perfil img {
     width: 20em;
     height: auto;
@@ -48,32 +61,57 @@
     box-shadow: 0 20px 24px rgba(0, 0, 0, 0.4);
 }
 
-button {
-    padding: 10px 15px;
-    margin-right: 10px;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px solid #8A2BE2;
-    cursor: pointer;
+.buttons {
+    display: flex;    
 }
 
-button a {
-  color: #8A2BE2;
-  text-decoration: none;
-  
-  size: bold;
+
+.btn:hover {
+    background-color: #8A2BE280;
 }
 
-.buttons_rosa a {
-    color: #fff;
-}
+.btn_grad {background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)}
+.btn_grad {
+     margin-right: 10px;
+     padding: 10px 25px;
+           text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+      }
 
-.buttons_rosa {
-    color: #fff;
-    border: none;
-    background: linear-gradient(106deg,rgba(135, 48, 176, 1) 21%, rgba(150, 48, 125, 1) 79%);
-}
+          .btn_grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+         .btn_grad_two {background-image: linear-gradient(to right, #614385 0%, #516395  51%, #614385  100%)}
+         .btn_grad_two {
+            padding: 10px 25px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;           
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+          }
+
+          .btn_grad_two:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+         
 
 .container_dois {
     margin-top: 3rem;

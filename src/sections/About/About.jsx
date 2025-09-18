@@ -39,18 +39,14 @@ const About = () => {
             </div>
         </div>
         <div className={styles.buttons}>
-            <button className={styles.buttons_rosa}>
+            <Link to="https://drive.google.com/file/d/1q3A4loM1D5hKrmFOj8hCXmwYOAB2Tzkx/view?usp=sharing" className={styles.btn_grad}>
                 <BsFileEarmarkTextFill />
-                <Link to="#">
-                    <strong> Acessar CV</strong>
-                </Link>
-            </button>
-            <button>
+                <strong> Acessar CV</strong>
+            </Link>
+            <a href="#project" className={styles.btn_grad_two}>
                 <FaCode />
-                <Link to="#">
-                    <strong> Ver código</strong>
-                </Link>
-            </button>
+                <strong> Ver código</strong>
+            </a>
         </div>
         <div className={styles.container_dois}>
             <div className={styles.card}>

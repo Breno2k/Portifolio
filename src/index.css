@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+svg {
+  vertical-align: middle;
+}
+
 .nav-link,
 .nav-link:visited,
 .nav-link:hover,
