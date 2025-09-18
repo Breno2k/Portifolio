@@ -9,6 +9,16 @@ import img2 from '../../assets/imagens/central_pet.png'
 import img3 from '../../assets/imagens/toten.png'
 import img4 from '../../assets/imagens/flappy_bird.png'
 import img5 from '../../assets/imagens/mystery_word.png'
+import cert1 from '../../assets/imagens/cert1.jpg'
+import cert2 from '../../assets/imagens/cert2.jpg'
+import cert3 from '../../assets/imagens/cert3.jpg'
+import cert4 from '../../assets/imagens/cert4.jpg'
+import cert5 from '../../assets/imagens/cert5.jpg'
+import cert6 from '../../assets/imagens/cert6.jpg'
+import cert7 from '../../assets/imagens/cert7.jpg'
+import cert8 from '../../assets/imagens/cert8.jpg'
+import cert9 from '../../assets/imagens/cert9.png'
+
 
 // Components
 import CardsProjects from './CardsProjects';
@@ -18,6 +28,7 @@ import NavProject from './NavProject'
 import { FaCode } from "react-icons/fa6";
 import { GrCertificate } from "react-icons/gr";
 import { BsBoxes } from "react-icons/bs";
+import CardsCertificates from './CardsCertificates';
 
 
 
@@ -68,8 +79,15 @@ const Projects = () => {
                 )}
                 {navProject === "certificados" && (
                     <>
-                        <CardsProjects title={""} description={""} img={""} />
-                        <CardsProjects title={""} description={""} img={""} />
+                        <CardsCertificates img={cert1} />
+                        <CardsCertificates img={cert2} />
+                        <CardsCertificates img={cert3} />
+                        <CardsCertificates img={cert4} />
+                        <CardsCertificates img={cert5} />
+                        <CardsCertificates img={cert6} />
+                        <CardsCertificates img={cert7} />
+                        <CardsCertificates img={cert8} />
+                        <CardsCertificates img={cert9} />
                     </>
                 )}
                 {navProject === "skills" && (

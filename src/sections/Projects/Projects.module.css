@@ -77,6 +77,31 @@ img {
   border-radius: 10px;
 }
 
+.img_cert {
+  width: auto;
+  height: 20rem;
+  padding: 8px;
+}
+
+.custom_modal {
+  width: 50rem;
+}
+
+
+
+.img_modal {
+  width: 50rem;
+  height: auto;
+}
+
+.cert {
+  transition: transform 0.3s ease; 
+}
+
+.cert:hover {
+  transform: translateY(-2px);
+}
+
 .card_projects {
   background-color: #452c63;
 }
