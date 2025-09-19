@@ -34,6 +34,9 @@ function App() {
           </section>
         </div>
       </div>
+      <footer>
+        <p>© 2025 Breno Melo. Todos os direitos reservados.</p>
+      </footer>
     </>
   )
 }
