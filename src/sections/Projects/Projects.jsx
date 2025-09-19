@@ -19,16 +19,30 @@ import cert7 from '../../assets/imagens/cert7.jpg'
 import cert8 from '../../assets/imagens/cert8.jpg'
 import cert9 from '../../assets/imagens/cert9.png'
 
-
 // Components
 import CardsProjects from './CardsProjects';
 import NavProject from './NavProject'
+import CardsCertificates from './CardsCertificates';
+import TechStack from './TechStack';
 
 // icons
 import { FaCode } from "react-icons/fa6";
 import { GrCertificate } from "react-icons/gr";
 import { BsBoxes } from "react-icons/bs";
-import CardsCertificates from './CardsCertificates';
+
+// SVG icons
+import javascript from '../../assets/javascript.svg'
+import html from '../../assets/html.svg'
+import css from '../../assets/css.svg'
+import react from '../../assets/react.svg'
+import next from '../../assets/next.svg'
+import mysql from '../../assets/mysql.svg'
+import postgresql from '../../assets/postgresql.svg'
+import vite from '../../assets/vite.svg'
+import bootstrap from '../../assets/bootstrap.svg'
+import tailwind from '../../assets/tailwind.svg'
+import git from '../../assets/git.svg'
+
 
 
 
@@ -37,7 +51,7 @@ const Projects = () => {
     const [navProject, setNavProject] = useState("projetos")
 
     return (
-        <>
+        <div className={styles.projects}>
             <div className={styles.intro}>
                 <h1>Portifolio Shocase</h1>
                 <p>Explore minha jornada através de projetos,
@@ -73,8 +87,8 @@ const Projects = () => {
                         <CardsProjects title="FocusFlow" description="FocusFlow uma ferramenta para turbinar sua produtividade! Inspirado na Técnica Pomodoro, você consegue controla suas sessões de concentração e pausas personalizadas de acordo com sua preferência." img={img1} />
                         <CardsProjects title="Central Pet" description="Central Pet é um site que cuida do seu pet, capaz de armazenar cartões de vacina e marcar consultas online com veterinários" img={img2} />
                         <CardsProjects title="Toten de autoatendimento" description="Um totem de autoatendimento digital moderno para redes de fast-food, permitindo que clientes realizem pedidos de forma intuitiva, personalizem seus combos e acompanhem o status de preparação em tempo real." img={img3} />
-                        <CardsProjects title={"Clumsy Bird"} description={"Clumsy Bird Master é um projeto de código aberto para construir e personalizar jogos no estilo Flappy Bird usando MelonJS."} img={img4} />
-                        <CardsProjects title={"Mystery Word"} description={"Jogo em que você desvenda a palavra misteriosa com base em uma dica, acertando letras até completá-la!"} img={img5} />
+                        <CardsProjects title="Clumsy Bird" description="Clumsy Bird Master é um projeto de código aberto para construir e personalizar jogos no estilo Flappy Bird usando MelonJS." img={img4} />
+                        <CardsProjects title="Mystery Word" description="Jogo em que você desvenda a palavra misteriosa com base em uma dica, acertando letras até completá-la!" img={img5} />
                     </>
                 )}
                 {navProject === "certificados" && (
@@ -90,19 +104,26 @@ const Projects = () => {
                         <CardsCertificates img={cert9} />
                     </>
                 )}
-                {navProject === "skills" && (
-                    <>
-                        <CardsProjects title={""} description={""} img={""} />
-                        <CardsProjects title={""} description={""} img={""} />
-                        <CardsProjects title={""} description={""} img={""} />
-                        <CardsProjects title={""} description={""} img={""} />
-                        <CardsProjects title={""} description={""} img={""} />
-                    </>
-                )}
             </div>
-
-        </>
-
+            {navProject === "skills" && (
+                <>
+                    <div className={styles.container_svg}>
+                        <TechStack img={html} name="HTML" />
+                        <TechStack img={css} name="CSS" />
+                        <TechStack img={javascript} name="JavaScript" />
+                        <TechStack img={react} name="React" />
+                        <TechStack img={tailwind} name="Tailwind CSS" />
+                        <TechStack img={next} name="Next.js" />
+                        <TechStack img={vite} name="Vite" />
+                        <TechStack img={bootstrap} name="Bootstrap" />
+                        <TechStack img={git} name="Git" />
+                        <TechStack img={mysql} name="MySQL" />
+                        <TechStack img={postgresql} name="PostgreSQL" />
+                    </div>
+                </>
+            )
+            }
+        </div>
     )
 }
 
