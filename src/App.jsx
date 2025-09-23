@@ -7,12 +7,19 @@ import Navbar from './components/navbar/Navbar'
 import About from './sections/About/About'
 import Projects from './sections/Projects/Projects'
 import Home from './sections/Home/Home'
+import Iridescence from './components/React Bits/Iridescente'
 
 function App() {
 
 
   return (
     <>
+      <Iridescence
+        color={[0.6, 0, 0.6]}
+        mouseReact={false}
+        amplitude={0.1}
+        speed={1.0}
+      />
       <div className="main-container">
         <Navbar />
         <div
@@ -35,7 +42,7 @@ function App() {
         </div>
       </div>
       <footer>
-        <p>© 2025 Breno Melo. Todos os direitos reservados.</p>
+        <h6>© 2025 Breno Melo. Todos os direitos reservados.</h6>
       </footer>
     </>
   )
