@@ -1,8 +1,10 @@
 .main_container {
-    margin-top: 20px;
-    display: flex;
-    /* height: 100vh; */
-    flex-direction: column;
+  margin-top: 20px;
+  margin-left: 8em;
+  margin-right: 8em;
+  display: flex;
+   height: 91vh; 
+  flex-direction: column;
 }
 
 .intro {
@@ -57,6 +59,7 @@ button::after {
   width: 100%;
   height: auto;
   border-radius: 15px;
+  margin-bottom: 25px;
 }
 
 .item hr {
@@ -67,6 +70,7 @@ button::after {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .tech p {
@@ -76,9 +80,17 @@ button::after {
   gap: 10px;
 }
 
+h4 {
+  font-size: 20px;
+  display: flex;
+  align-items: center; /* centraliza verticalmente ícone e texto */
+  gap: 8px;
+}
+
 .btn {
   display: flex;
   flex-direction: row;
+  margin-bottom: 25px;
 }
 
 .btn_grad {background-image: linear-gradient(to right, #e96443 0%, #904e95  51%, #e96443  100%)}
@@ -103,4 +115,56 @@ button::after {
    color: #fff;
    text-decoration: none;
  }
-         
+
+ .wrapper {
+  width: 100%;
+  padding: 10px;
+  background: #901aff; 
+  border-radius: 8px;   
+  margin: 25px 0 25px 0;
+}
+
+.total_Tech, .total_Features {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  gap: 10px;
+  background-color: #33006F;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.total_Features {
+  background-color: #904e95;
+}
+
+.total_Tech .texts,
+.total_Features .texts {
+  display: flex;
+  flex-direction: column; /* empilha h3 e p */
+}
+
+.cards {
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.icon {
+  width: 3.1em;
+  height: 3.1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #4E4466;
+}
+
+.features {
+  border: 1px solid #000;
+  padding: 15px;
+  border-radius: 15px;
+}

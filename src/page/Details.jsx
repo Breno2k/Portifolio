@@ -8,6 +8,7 @@ import { FaCode } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { BsStack } from "react-icons/bs";
 
 const Details = () => {
 
@@ -28,30 +29,53 @@ const Details = () => {
                     <h1>{title}</h1>
                     <hr />
                     <p>{description}</p>
+                    <div className={styles.wrapper}>
+                        <div className={styles.cards}>
+                            <div className={styles.total_Tech}>
+                                <div className={styles.icon}>
+                                    <FaCode size={20} />
+                                </div>
+                                <div className="texts">
+                                    <h3>12</h3>
+                                    <p>Total Technologies</p>
+                                </div>
+                            </div>
+                            <div className={styles.total_Features}>
+                                <div className={styles.icon}>
+                                    <BsStack size={20} />
+                                </div>
+                                <div className="texts">
+                                    <h3>12</h3>
+                                    <p>Total Technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className={styles.btn}>
                         <a className={styles.btn_grad} href={deploy}><BsBoxArrowUpRight /> Live Demo</a>
                         <a className={styles.btn_grad} href={github}><FaGithub /> Github</a>
                     </div>
-                    <h4><FaCode /> Technologies Used</h4>
+                    <h4><FaCode size={20} /> Technologies Used</h4>
                     <div className={styles.tech}>
-                        {tech && tech.map((tech) =>
-                            <p>{tech}</p>
+                        {tech && tech.map((tech, index) =>
+                            <p key={index}>{tech}</p>
                         )}
                     </div>
                 </div>
                 <div className={styles.item}>
                     <img src={img} alt="imagem do projeto" />
-                    <h4><FaRegStar /> Key Features</h4>
                     <div className={styles.features}>
-                        {caracteristicas && caracteristicas.map((caracteristicas) =>
-                            <ul>
-                                <li>{caracteristicas}</li>
-                            </ul>
-                        )}
+                        <h4><FaRegStar size={20} /> Key Features</h4>
+                        <ul>
+                            {caracteristicas && caracteristicas.map((caracteristicas, index) =>
+                                <li key={index}>{caracteristicas}</li>
+
+                            )}
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
