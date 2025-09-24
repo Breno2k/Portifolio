@@ -84,11 +84,46 @@ const Projects = () => {
             <div className={styles.cards_container}>
                 {navProject === "projetos" && (
                     <>
-                        <CardsProjects title="FocusFlow" description="FocusFlow uma ferramenta para turbinar sua produtividade! Inspirado na Técnica Pomodoro, você consegue controla suas sessões de concentração e pausas personalizadas de acordo com sua preferência." img={img1} />
-                        <CardsProjects title="Central Pet" description="Central Pet é um site que cuida do seu pet, capaz de armazenar cartões de vacina e marcar consultas online com veterinários" img={img2} />
-                        <CardsProjects title="Toten de autoatendimento" description="Um totem de autoatendimento digital moderno para redes de fast-food, permitindo que clientes realizem pedidos de forma intuitiva, personalizem seus combos e acompanhem o status de preparação em tempo real." img={img3} />
-                        <CardsProjects title="Clumsy Bird" description="Clumsy Bird Master é um projeto de código aberto para construir e personalizar jogos no estilo Flappy Bird usando MelonJS." img={img4} />
-                        <CardsProjects title="Mystery Word" description="Jogo em que você desvenda a palavra misteriosa com base em uma dica, acertando letras até completá-la!" img={img5} />
+                        <CardsProjects
+                            title="FocusFlow"
+                            description="FocusFlow uma ferramenta para turbinar sua produtividade! Inspirado na Técnica Pomodoro, você consegue controla suas sessões de concentração e pausas personalizadas de acordo com sua preferência."
+                            img={img1}
+                            tech={["ReactJS", "Shadcn", "Tailwind CSS", "CSS Modules", "Vite", "Vercel"]}
+                            github="https://github.com/Breno2k/FocusFlow"
+                            caracteristicas={["Função de cronômetro para resgistrar o tempo corrido.", "Configuração personalizada dos períodos de foco.", "Configuração personalizada dos períodos de pausa."]}
+                            deploy="https://foca-flow.vercel.app/" />
+                        <CardsProjects
+                            title="Mystery Word"
+                            description="Jogo em que você desvenda a palavra misteriosa com base em uma dica, acertando letras até completá-la!"
+                            img={img5}
+                            tech={["ReactJS", "CSS"]}
+                            github="https://github.com/Breno2k/Mystery-word"
+                            caracteristicas={["Limite de tentativas", "Pontuação por palavra acertada", "Váriadade de categorias"]}
+                            deploy="https://breno2k.github.io/Mystery-word/" />
+                        <CardsProjects
+                            title="Toten de autoatendimento"
+                            description="Um totem de autoatendimento digital moderno para redes de fast-food, permitindo que clientes realizem pedidos de forma intuitiva, personalizem seus combos e acompanhem o status de preparação em tempo real."
+                            img={img3}
+                            tech={["Next.JS", "TypeScript", "Tailwind CSS", "Prisma", "Vercel", "Shadcn"]}
+                            github="https://github.com/Breno2k/toten-donalds"
+                            caracteristicas={["Cardápio estruturado com filtros", "Sistema de carrinho", "Validação de CPF"]}
+                            deploy="https://toten-donalds.vercel.app/fsw-donalds" />
+                        <CardsProjects
+                            title="Clumsy Bird"
+                            description="Clumsy Bird Master é um projeto de código aberto para construir e personalizar jogos no estilo Flappy Bird usando MelonJS."
+                            img={img4}
+                            tech={["JavaScript", "HTML", "CSS"]}
+                            github="https://github.com/Breno2k/clumsy-bird-master"
+                            caracteristicas={["Estrutura Modular e Organizada", "Estrutura Modular e Organizada", "Compatibilidade com MelonJS"]}
+                            deploy="ellisonleao.github.io/clumsy-bird/" />
+                        <CardsProjects
+                            title="Central Pet"
+                            description="Central Pet é um site que cuida do seu pet, capaz de armazenar cartões de vacina e marcar consultas online com veterinários"
+                            img={img2}
+                            tech={["HTML", "CSS", "JavaScript", "PHP", "Bootstrap"]}
+                            github="https://github.com/Breno2k/Central-Pet"
+                            caracteristicas={["Sistema de login de usuário", "Armazenamento de cartões de vacina", "Sistema de marcar consultas com veterinários"]}
+                            deploy="https://central-pet.onrender.com/" />
                     </>
                 )}
                 {navProject === "certificados" && (
@@ -124,6 +159,8 @@ const Projects = () => {
             )
             }
         </div>
+
+
     )
 }
 

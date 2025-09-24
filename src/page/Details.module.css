@@ -1,0 +1,106 @@
+.main_container {
+    margin-top: 20px;
+    display: flex;
+    /* height: 100vh; */
+    flex-direction: column;
+}
+
+.intro {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.intro p {
+    margin-bottom: 0;
+}
+
+button {
+  display: inline-flex;
+  background-color: #33006F;
+  padding: 12px 17px;
+  gap: 5px;
+  align-items: center; 
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+button:hover {  
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+
+button::after {
+  transform: scale(-0.95);
+  transition: 0.3s ease;
+}
+
+.container {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;       /* garante que o container ocupe toda a largura do pai */
+  max-width: 100%;
+}
+
+.item {
+  flex: 0 0 calc(50% - 10px); /* subtrai metade do gap */
+  height: auto;
+  color: #000;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.item hr {
+    width: 20%;
+}
+
+.tech {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tech p {
+  padding: 10px 15px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn_grad {background-image: linear-gradient(to right, #e96443 0%, #904e95  51%, #e96443  100%)}
+.btn_grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5px;
+ }
+
+ .btn_grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+         

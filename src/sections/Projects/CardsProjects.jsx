@@ -3,9 +3,13 @@ import styles from './Projects.module.css'
 // icons
 import { GoArrowRight } from "react-icons/go";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
-const CardsProjects = ({ title, description, img, }) => {
+const CardsProjects = ({ title, deploy, description, img, tech, github, caracteristicas }) => {
+
+    const navigate = useNavigate()
+
     return (
         <div className={`${styles.card_projects} card text-white`}>
             <div className={styles.img_wrapper}>
@@ -17,7 +21,10 @@ const CardsProjects = ({ title, description, img, }) => {
                 <p className={`${styles.limite} card-text`}>{description}</p>
                 <div className={styles.details}>
                     <a href="#">Live Demo <BsBoxArrowUpRight /></a>
-                    <button>Details <GoArrowRight /></button>
+                    <button onClick={() => navigate("/details",
+                        { state: { title, deploy, description, img, tech, github, caracteristicas } })
+                    }>Details <GoArrowRight />
+                    </button>
                 </div>
             </div>
         </div>
