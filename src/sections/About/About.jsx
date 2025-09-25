@@ -54,9 +54,9 @@ const About = () => {
                     <div className={styles.icon}>
                         <FaCode size={30} />
                     </div>
-                    <h1>11</h1>
+                    <h1>5</h1>
                 </div>
-                <h4>Total de Projetos</h4>
+                <h6>Total de Projetos</h6>
                 <p>Soluções web inovadoras. </p>
             </div>
             <div className={styles.card}>
@@ -64,9 +64,9 @@ const About = () => {
                     <div className={styles.icon}>
                         <GrCertificate size={30} />
                     </div>
-                    <h1>11</h1>
+                    <h1>9</h1>
                 </div>
-                <h4>Certificados</h4>
+                <h6>Certificados</h6>
                 <p>Validação de habilidades profissionais. </p>
             </div>
             <div className={styles.card}>
@@ -74,9 +74,9 @@ const About = () => {
                     <div className={styles.icon}>
                         <MdOutlineLanguage size={30} />
                     </div>
-                    <h1>11</h1>
+                    <h1>4</h1>
                 </div>
-                <h4>Anos de Experiência</h4>
+                <h6>Anos de Experiência</h6>
                 <p>Jornadas de aprendizado contínuo </p>
             </div>
         </div>

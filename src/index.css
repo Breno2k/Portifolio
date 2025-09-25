@@ -1,4 +1,9 @@
+:root {
+  --primary-color: linear-gradient(to right, #8e2de2, #4a00e0);
+
+}
 body {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;

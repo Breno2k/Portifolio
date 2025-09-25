@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Iridescence
-        color={[0.6, 0, 0.6]}
+        color={[0.2, 0, 0.3]}
         mouseReact={false}
         amplitude={0.1}
         speed={1.0}
