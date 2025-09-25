@@ -8,11 +8,15 @@ const Home = () => {
     return (
         <div className={styles.home}>
             <div className={styles.container}>
-                <h1>Desenvolvedor <span>Front-end</span></h1>
-                <p> Em busca de oportunidades para criar soluções
-                    inovadoras, afim de otimizar processos e
-                    gerar impacto positivo em negócios.
-                </p>
+                <h1>Frontend <span>Developer</span></h1>
+                <div className={styles.intro}>
+                    <p>
+                        Em busca de oportunidades para criar soluções
+                        inovadoras, afim de otimizar processos e
+                        gerar impacto positivo em negócios.
+                    </p>
+                </div>
+
                 <div className={styles.program}>
                     <p>React</p>
                     <p>JavaScript</p>
