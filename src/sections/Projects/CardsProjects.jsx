@@ -2,7 +2,8 @@ import styles from './Projects.module.css'
 
 // icons
 import { GoArrowRight } from "react-icons/go";
-import { BsBoxArrowUpRight } from "react-icons/bs";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -20,7 +21,7 @@ const CardsProjects = ({ title, deploy, description, img, tech, github, caracter
                 <h5 className="card-title">{title}</h5>
                 <p className={`${styles.limite} card-text`}>{description}</p>
                 <div className={styles.details}>
-                    <a href="#">Live Demo <BsBoxArrowUpRight /></a>
+                    <a href="#">Live Demo <FaExternalLinkAlt /></a>
                     <button onClick={() => navigate("/details",
                         { state: { title, deploy, description, img, tech, github, caracteristicas } })
                     }>Details <GoArrowRight />

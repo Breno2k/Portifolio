@@ -1,3 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/dortmund');
+@import url('https://fonts.cdnfonts.com/css/br-segma');
+@import url('https://fonts.cdnfonts.com/css/rem');
+
 .intro {
     display: flex;
     align-items: center;
@@ -11,17 +15,24 @@
 }
 
 .intro h1 {
+  font-family: 'Dortmund', sans-serif;
   color: #8A2BE2;
+} 
+
+.intro p {
+  font-family: 'BR Segma', sans-serif;
+  color: #A9A9A9;
 }
 
 .wrapper {
   padding: 10px;
-  background: #901aff; 
+  background: rgba(52, 0, 112, 0.7);
   border-radius: 8px;   
   margin-bottom: 10px;
 }
 
 .cards_container {
+  font-family: 'REM', sans-serif;
   display: grid; 
   width: 100%;
   align-items: stretch;
@@ -55,7 +66,7 @@
     flex-grow: 1;
     flex-direction: column; 
     padding: 1px;
-    background-color: #483D8B;
+    background-color: transparent;
     justify-content: space-between;
     border-radius: 10px;
     cursor: pointer;
@@ -63,7 +74,7 @@
 }
 
 .container:hover {
-  background-color: #7264ca;
+  background-color: rgba(78, 3, 148, 0.5);
   transform: translateY(-2px);
 }
 
@@ -79,11 +90,13 @@
 }
 
 .active {
-  background-color: #6d0083; /* cor quando clicado/ativo */
+  background-color: #4e0394; /* cor quando clicado/ativo */
   font-weight: bold;
+  color: #fff;
 }
 
 .limite {
+  color: #A9A9A9;
   display: -webkit-box;
   -webkit-line-clamp: 2;   /* número máximo de linhas */
   -webkit-box-orient: vertical;
@@ -116,20 +129,26 @@
 }
 
 .card_projects {
-  background-color: #452c63;
+  background-color: rgba(78, 3, 148, 1);
   padding: 10px;
-  border: 1px solid transparent;
+  border-radius: 12px;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card_projects h5 {
+  color: 	#C0C0C0;
 }
 
 .card_projects:hover {
-  border: 1px solid #1E90FF;;
+  border-color: #741eff;;
 }
 
 .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'REM', sans-serif;
 }
 
 .details a {
@@ -146,7 +165,7 @@
 
 .details button {
   display: inline-flex;
-  background-color: #33006F;
+  background-color: #3f0377;
   padding: 5px 10px;
   gap: 5px;
   align-items: center; 
@@ -158,12 +177,13 @@
 }
 
 button:hover {  
-  transform: scale(0.95);
+  transform: scale(1.95);
   transition: 0.3s ease;
+  background-color: #31025e;
 }
 
 button::after {
-  transform: scale(-0.95);
+  transform: scale(-1.95);
   transition: 0.3s ease;
 }
 
@@ -186,7 +206,7 @@ button::after {
   width: 12rem;
   height: 12rem;
   border-radius: 10px;
-  background-color: #671e70;
+  background-color: rgba(78, 3, 148, 0.5);
   transition: all 0.3s ease;
   cursor: pointer;
 }

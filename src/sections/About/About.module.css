@@ -119,13 +119,16 @@ p span {
             text-decoration: none;
           }
 
-         .btn_grad_two {background-image: linear-gradient(to right, #614385 0%, #516395  51%, #614385  100%)}
+
          .btn_grad_two {
+            background-color: transparent;
+            font-family: 'BR Segma', sans-serif;
+            border: 2px solid #8A2BE2;
             padding: 10px 25px;
             text-align: center;
-            transition: 0.5s;
+            transition: 0.3s;
             background-size: 200% auto;
-            color: white;           
+            color: #a65deb;         
             border-radius: 10px;
             display: inline-flex;
             align-items: center;
@@ -133,8 +136,7 @@ p span {
           }
 
           .btn_grad_two:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
+            background-color: rgba(138, 43, 226, 0.2);
             text-decoration: none;
           }
          

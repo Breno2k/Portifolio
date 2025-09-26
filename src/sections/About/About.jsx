@@ -45,7 +45,7 @@ const About = () => {
             </Link>
             <a href="#project" className={styles.btn_grad_two}>
                 <FaCode />
-                <strong> Ver código</strong>
+                Ver código
             </a>
         </div>
         <div className={styles.container_dois}>
