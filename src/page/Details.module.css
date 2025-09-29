@@ -1,20 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/dortmund');
+@import url('https://fonts.cdnfonts.com/css/br-segma');
+
 .main_container {
   margin-top: 20px;
   margin-left: 8em;
   margin-right: 8em;
   display: flex;
-   height: 91vh; 
+  height: 91vh; 
   flex-direction: column;
+  font-family: 'BR Segma', sans-serif;
 }
 
-.intro {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+.intro {    
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 .intro p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 button {
@@ -42,17 +46,18 @@ button::after {
 
 .container {
   margin-top: 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
   gap: 20px;
-  flex-wrap: wrap;
-  width: 100%;       /* garante que o container ocupe toda a largura do pai */
-  max-width: 100%;
+  width: 100%;
 }
 
 .item {
-  flex: 0 0 calc(50% - 10px); /* subtrai metade do gap */
-  height: auto;
-  color: #000;
+  color: #fff;
+}
+
+.item p, li {
+  color: #A9A9A9;
 }
 
 .item img {
@@ -62,25 +67,47 @@ button::after {
   margin-bottom: 25px;
 }
 
-.item hr {
-    width: 20%;
+.hr {
+  width: 20%;
+  height: 4px;
+  margin: 15px 0 20px 0;
+  border-radius: 2px;
+  background-image: linear-gradient(to right, #9700c2, #8523ce, #6f34d9, #5141e2, #124beb);
+  
 }
 
 .tech {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 15px;
 }
 
 .tech p {
   padding: 10px 15px;
-  border: 1px solid #000;
+  background-color: rgba(78, 3, 148, 0.5);
+  color: #66CCFF;
+  font-weight: bold;
+  border: 1px solid transparent;
   border-radius: 15px;
   gap: 10px;
+  white-space: nowrap;
+  transition: background-color 0.5s ease;
+}
+
+.tech p:hover {
+  background-color: #4e0394;
+  border-color: #5141e2;
+}
+
+h1 {
+  font-family: 'Dortmund', sans-serif;
+  font-size: 2.4vw;
 }
 
 h4 {
+  font-family: 'Dortmund', sans-serif;
   font-size: 20px;
   display: flex;
   align-items: center; /* centraliza verticalmente ícone e texto */
@@ -93,8 +120,8 @@ h4 {
   margin-bottom: 25px;
 }
 
-.btn_grad {background-image: linear-gradient(to right, #e96443 0%, #904e95  51%, #e96443  100%)}
-.btn_grad {
+.btn_grad_um {background-image: linear-gradient(to right, #4568DC 0%, #B06AB3  51%, #4568DC  100%)}
+.btn_grad_um {
    margin: 10px;
    padding: 15px 45px;
    text-align: center;
@@ -102,15 +129,30 @@ h4 {
    transition: 0.5s;
    background-size: 200% auto;
    color: white;            
-   box-shadow: 0 0 20px #eee;
    border-radius: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 5px;
+   gap: 5px
  }
+.btn_grad_dois {background-image: linear-gradient(to right, #B24592 0%, #F15F79  51%, #B24592  100%)}
+.btn_grad_dois {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5px
+ }
+         
 
- .btn_grad:hover {
+.btn_grad_um:hover, .btn_grad_dois:hover {
    background-position: right center; /* change the direction of the change here */
    color: #fff;
    text-decoration: none;
@@ -119,7 +161,7 @@ h4 {
  .wrapper {
   width: 100%;
   padding: 10px;
-  background: #901aff; 
+  background-color: rgba(78, 3, 148, 0.5);
   border-radius: 8px;   
   margin: 25px 0 25px 0;
 }
@@ -129,18 +171,36 @@ h4 {
   align-items: center;
   height: 5rem;
   width: 100%;
-  gap: 10px;
+  gap: 5px;
   background-color: #33006F;
   border-radius: 10px;
   padding: 10px;
+  transition: transform 0.3s ease;
+  border: 1px solid;
+}
+
+.total_Tech {
+  border-color: #6d46fd;
+  
 }
 
 .total_Features {
-  background-color: #904e95;
+  border-color: #f390fa;
+  
+}
+.total_Tech:hover {
+  border-color: #3700ff;
+  transform: scale(1.03);
+}
+
+.total_Features:hover {
+  border-color: #a700b3;
+  transform: scale(1.03);
 }
 
 .total_Tech .texts,
 .total_Features .texts {
+  margin: 15px 0 0 10px;
   display: flex;
   flex-direction: column; /* empilha h3 e p */
 }
@@ -160,11 +220,71 @@ h4 {
   display: flex;
   justify-content: center;
   border-radius: 50%;
-  background-color: #4E4466;
+}
+
+.total_Tech .icon {
+  background-color: #4b2bb0;
+}
+
+.total_Features .icon {
+  background-color: #c55dc9;
 }
 
 .features {
-  border: 1px solid #000;
+  background-color: #33006F;
+  border: 1px solid #494949;
   padding: 15px;
   border-radius: 15px;
+  align-items: center;
+}
+
+ul li::marker {
+  color: #ff00ff;   /* cor da bolinha */
+  font-size: 3rem; /* tamanho da bolinha */
+}
+
+/* li {
+  display: list-item flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 10px;
+  margin: 15px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #280055;
+  border-color: #494949;
+} */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  margin: 15px;
+  padding: 10px 10px 10px 30px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #280055;
+  border-color: #494949;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #f390fa, #741eff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
