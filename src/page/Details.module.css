@@ -258,12 +258,12 @@ li:hover {
   border-color: #494949;
 } */
 
-ul {
+.features ul {
   list-style: none;
   padding-left: 0;
 }
 
-li {
+.features ul li {
   position: relative;
   margin: 15px;
   padding: 10px 10px 10px 30px;
@@ -274,12 +274,12 @@ li {
   transition: background-color 0.3s ease;
 }
 
-li:hover {
+.features ul li:hover {
   background-color: #280055;
   border-color: #494949;
 }
 
-li::before {
+.features ul li::before {
   content: "•";
   position: absolute;
   left: 10px;
