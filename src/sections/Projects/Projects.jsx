@@ -81,7 +81,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className={styles.cards_container}>
+            <div id="projects" className={styles.cards_container}>
                 {navProject === "projetos" && (
                     <>
                         <CardsProjects

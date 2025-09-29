@@ -1,4 +1,7 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+// React router
+import { useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import styles from './Details.module.css'
 
 // Icons
@@ -13,8 +16,6 @@ import { IoIosCode } from "react-icons/io";
 
 const Details = () => {
 
-    const navigate = useNavigate()
-
     const location = useLocation()
 
     const { title, deploy, description, img, tech, github, caracteristicas } = location.state || {};
@@ -22,7 +23,9 @@ const Details = () => {
     return (
         <div className={styles.main_container}>
             <div className={styles.intro}>
-                <button onClick={() => navigate("/")}> <GoArrowLeft /> Back</button>
+                <HashLink smooth to="/#projects">
+                    <button> <GoArrowLeft /> Back</button>
+                </HashLink>
                 <p>Projects <IoIosArrowForward /> <span>{title}</span></p>
             </div>
             <div className={styles.container}>

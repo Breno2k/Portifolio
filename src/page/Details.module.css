@@ -238,25 +238,6 @@ h4 {
   align-items: center;
 }
 
-ul li::marker {
-  color: #ff00ff;   /* cor da bolinha */
-  font-size: 3rem; /* tamanho da bolinha */
-}
-
-/* li {
-  display: list-item flex;
-  align-items: center;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  padding: 10px;
-  margin: 15px;
-  transition: background-color 0.3s ease;
-}
-
-li:hover {
-  background-color: #280055;
-  border-color: #494949;
-} */
 
 .features ul {
   list-style: none;
