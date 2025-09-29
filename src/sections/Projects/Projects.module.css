@@ -203,8 +203,8 @@ button::after {
   justify-content: center;
   gap: 5px;
   flex-direction: column;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 10px;
   background-color: rgba(78, 3, 148, 0.5);
   transition: all 0.3s ease;
@@ -216,16 +216,16 @@ button::after {
 }
 
 .svg_image {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   transition: all 0.3s ease;
   background-color: transparent;
 }
 
 .svg_image:hover {
-  filter: drop-shadow(-2px -2px 4px #8E5CFF)
-          drop-shadow(3px 2px 4px #E488FF)
-          drop-shadow(2px -1px 4px #80C7FF);
+  filter: drop-shadow(-2px -2px 3px #8E5CFF)
+          drop-shadow(3px 2px 3px #E488FF)
+          drop-shadow(2px -1px 3px #80C7FF);
   transition: filter 0.3s ease;
   transition: box-shadow 0.3s ease;
 }
