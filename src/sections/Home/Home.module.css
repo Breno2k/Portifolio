@@ -64,7 +64,7 @@
     text-decoration: none;
 }
 
-.img_home img {
+img {
     width: 40em;
-    height: 40em;
+    border-radius: 15px;
 } 

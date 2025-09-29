@@ -1,7 +1,7 @@
 import styles from './Home.module.css'
 import { FaGithub } from "react-icons/fa6";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
-import img1 from '../../assets/imagens/astronauta.png'
+import video1 from '../../assets/video/gif.gif'
 
 
 const Home = () => {
@@ -36,7 +36,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.img_home}>
-                <img src={img1} alt="foto home" />
+                <img src={video1} alt="gif animado" />
             </div>
         </div>
 
