@@ -58,34 +58,40 @@ const About = () => {
         </div>
         <div className={styles.container_dois}>
             <div data-aos="fade-right" data-aos-duration="1400" className={styles.card}>
-                <div className={styles.container_tres}>
-                    <div className={styles.icon}>
-                        <FaCode size={30} />
+                <div className={styles.card_inner}>
+                    <div className={styles.container_tres}>
+                        <div className={styles.icon}>
+                            <FaCode size={30} />
+                        </div>
+                        <h1>5</h1>
                     </div>
-                    <h1>5</h1>
+                    <h6>Total de Projetos</h6>
+                    <p>Soluções web inovadoras. </p>
                 </div>
-                <h6>Total de Projetos</h6>
-                <p>Soluções web inovadoras. </p>
             </div>
             <div data-aos="fade-up" data-aos-duration="1400" className={styles.card}>
-                <div className={styles.container_tres}>
-                    <div className={styles.icon}>
-                        <GrCertificate size={30} />
+                <div className={styles.card_inner}>
+                    <div className={styles.container_tres}>
+                        <div className={styles.icon}>
+                            <GrCertificate size={30} />
+                        </div>
+                        <h1>9</h1>
                     </div>
-                    <h1>9</h1>
+                    <h6>Certificados</h6>
+                    <p>Validação de habilidades profissionais. </p>
                 </div>
-                <h6>Certificados</h6>
-                <p>Validação de habilidades profissionais. </p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1400" className={styles.card}>
-                <div className={styles.container_tres}>
-                    <div className={styles.icon}>
-                        <MdOutlineLanguage size={30} />
+                <div className={styles.card_inner}>
+                    <div className={styles.container_tres}>
+                        <div className={styles.icon}>
+                            <MdOutlineLanguage size={30} />
+                        </div>
+                        <h1>4</h1>
                     </div>
-                    <h1>4</h1>
+                    <h6>Anos de Experiência</h6>
+                    <p>Jornadas de aprendizado contínuo </p>
                 </div>
-                <h6>Anos de Experiência</h6>
-                <p>Jornadas de aprendizado contínuo </p>
             </div>
         </div>
 

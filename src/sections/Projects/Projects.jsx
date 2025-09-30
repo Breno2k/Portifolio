@@ -99,7 +99,7 @@ const Projects = () => {
                             deploy="https://foca-flow.vercel.app/" />
                         <CardsProjects
                             title="Mystery Word"
-                            description="Jogo em que você desvenda a palavra misteriosa com base em uma dica, acertando letras até completá-la!"
+                            description="Jogo em que o objetivo é descobrir a palavra misteriosa a partir de uma dica, completando-a letra por letra. O jogador possui apenas 5 tentativas; ao ultrapassá-las, o jogo é encerrado."
                             img={img5}
                             tech={["ReactJS", "CSS"]}
                             github="https://github.com/Breno2k/Mystery-word"
@@ -111,15 +111,15 @@ const Projects = () => {
                             img={img3}
                             tech={["Next.JS", "TypeScript", "Tailwind CSS", "Prisma", "Vercel", "Shadcn"]}
                             github="https://github.com/Breno2k/toten-donalds"
-                            caracteristicas={["Cardápio estruturado com filtros", "Sistema de carrinho", "Validação de CPF"]}
+                            caracteristicas={["Cardápio estruturado com filtros.", "Acompanhamento de status de preparação.", "Sistema de carrinho.", "Validação de CPF."]}
                             deploy="https://toten-donalds.vercel.app/fsw-donalds" />
                         <CardsProjects
                             title="Clumsy Bird"
-                            description="Clumsy Bird Master é um projeto de código aberto para construir e personalizar jogos no estilo Flappy Bird usando MelonJS."
+                            description="Criei minha própria versão personalizada do Clumsy Bird, alterando o pássaro, o fundo, os canos e outros elementos para deixar o jogo com a minha cara."
                             img={img4}
                             tech={["JavaScript", "HTML", "CSS"]}
                             github="https://github.com/Breno2k/clumsy-bird-master"
-                            caracteristicas={["Estrutura Modular e Organizada", "Estrutura Modular e Organizada", "Compatibilidade com MelonJS"]}
+                            caracteristicas={["Customizable Assets", "Animated Bird", "Dynamic Obstacles", "Interactive Feedback"]}
                             deploy="ellisonleao.github.io/clumsy-bird/" />
                         <CardsProjects
                             title="Central Pet"
