@@ -1,18 +1,24 @@
+// styles
 import styles from './Projects.module.css'
+
+// hooks
+import useAOS from '../../hooks/useAOS';
 
 // icons
 import { GoArrowRight } from "react-icons/go";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+// react router
 import { useNavigate } from 'react-router-dom';
 
-
 const CardsProjects = ({ title, deploy, description, img, tech, github, caracteristicas }) => {
+
+    useAOS();
 
     const navigate = useNavigate()
 
     return (
-        <div className={`${styles.card_projects} card text-white`}>
+        <div data-aos="fade-up" data-aos-duration="1400" className={`${styles.card_projects} card text-white`}>
             <div className={styles.img_wrapper}>
                 <img className={styles.card_img} src={img} alt="imagem do projeto" />
             </div>

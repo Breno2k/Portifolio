@@ -2,7 +2,11 @@
 import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
+// styles
 import styles from './Details.module.css'
+
+// hooks
+import useAOS from '../hooks/useAOS';
 
 // Icons
 import { GoArrowLeft } from "react-icons/go";
@@ -15,6 +19,8 @@ import { BsStack } from "react-icons/bs";
 import { IoIosCode } from "react-icons/io";
 
 const Details = () => {
+
+    useAOS();
 
     const location = useLocation()
 
@@ -29,7 +35,7 @@ const Details = () => {
                 <p>Projects <IoIosArrowForward /> <span>{title}</span></p>
             </div>
             <div className={styles.container}>
-                <div className={styles.item}>
+                <div data-aos="fade-right" className={styles.item}>
                     <h1>{title}</h1>
                     <div className={styles.hr} ></div>
                     <p>{description}</p>
@@ -66,7 +72,7 @@ const Details = () => {
                         )}
                     </div>
                 </div>
-                <div className={styles.item}>
+                <div data-aos="fade-left" className={styles.item}>
                     <img src={img} alt="imagem do projeto" />
                     <div className={styles.features}>
                         <h4><FaRegStar color="yellow" size={20} /> Key Features</h4>

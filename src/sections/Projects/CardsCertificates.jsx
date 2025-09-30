@@ -14,6 +14,7 @@ const CardsCertificates = ({ img }) => {
         <>
             {/* Card */}
             <div
+                data-aos="fade-up" data-aos-duration="1400"
                 className={`${styles.card_projects} ${styles.cert} card`}
                 style={{ cursor: "pointer" }}
                 onClick={handleOpen}

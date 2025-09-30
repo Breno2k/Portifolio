@@ -19,6 +19,9 @@ import cert7 from '../../assets/imagens/cert7.jpg'
 import cert8 from '../../assets/imagens/cert8.jpg'
 import cert9 from '../../assets/imagens/cert9.png'
 
+// hook
+import useAOS from '../../hooks/useAOS';
+
 // Components
 import CardsProjects from './CardsProjects';
 import NavProject from './NavProject'
@@ -48,13 +51,15 @@ import git from '../../assets/git.svg'
 
 const Projects = () => {
 
+    useAOS();
+
     const [navProject, setNavProject] = useState("projetos")
 
     return (
         <div className={styles.projects}>
             <div className={styles.intro}>
-                <h1>Portifolio Shocase</h1>
-                <p>Explore minha jornada através de projetos,
+                <h1 data-aos="fade-up">Portifolio Shocase</h1>
+                <p data-aos="fade-up" data-aos-duration="1100">Explore minha jornada através de projetos,
                     certificações e conhecimento técnico. Cada seção
                     representa um marco em meu caminho de aprendizado contínuo.</p>
             </div>

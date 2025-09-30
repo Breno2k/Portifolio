@@ -1,27 +1,35 @@
+// styles
 import styles from './About.module.css'
 
+// imagens
 import img from '../../assets/imagens/perfil.jpg'
 
+// react router
 import { Link } from 'react-router-dom';
+
+// hook
+import useAOS from '../../hooks/useAOS';
 
 // Icons
 import { BsFileEarmarkTextFill } from "react-icons/bs";
 import { FaCode } from "react-icons/fa6";
 import { FiStar } from "react-icons/fi";
 import { GrCertificate } from "react-icons/gr";
-import { GiSandsOfTime } from "react-icons/gi";
 import { MdOutlineLanguage } from "react-icons/md";
 
 const About = () => {
+
+    useAOS();
+
     return <div className={styles.about}>
         <div className={styles.intro}>
-            <h1>Sobre mim</h1>
-            <p><span><FiStar /></span> Transformando ideias em experiências digitais. <span><FiStar /></span></p>
+            <h1 data-aos="fade-up">Sobre mim</h1>
+            <p data-aos="fade-up" data-aos-duration="1200"><span><FiStar /></span> Transformando ideias em experiências digitais. <span><FiStar /></span></p>
         </div>
         <div className={styles.container}>
             <div className={styles.apresentacao}>
-                <h1><span>Olá, eu sou</span><br /> Breno Lucas Souza de Albuquerque Melo</h1>
-                <p>Sou graduado em Análise e
+                <h1 data-aos="fade-right" data-aos-duration="1400"><span>Olá, eu sou</span><br /> Breno Lucas Souza de Albuquerque Melo</h1>
+                <p data-aos="fade-right" data-aos-duration="1600">Sou graduado em Análise e
                     Desenvolvimento de Sistemas e já
                     atuei como desenvolvedor de
                     automações e agentes de inteligência
@@ -34,11 +42,11 @@ const About = () => {
                     resultados.
                 </p>
             </div>
-            <div className={styles.img_perfil}>
+            <div data-aos="fade-left" data-aos-duration="1400" className={styles.img_perfil}>
                 <img src={img} alt="foto home" />
             </div>
         </div>
-        <div className={styles.buttons}>
+        <div data-aos="fade-right" data-aos-duration="1600" className={styles.buttons}>
             <Link to="https://drive.google.com/file/d/1q3A4loM1D5hKrmFOj8hCXmwYOAB2Tzkx/view?usp=sharing" className={styles.btn_grad}>
                 <BsFileEarmarkTextFill />
                 <strong> Acessar CV</strong>
@@ -49,7 +57,7 @@ const About = () => {
             </a>
         </div>
         <div className={styles.container_dois}>
-            <div className={styles.card}>
+            <div data-aos="fade-right" data-aos-duration="1400" className={styles.card}>
                 <div className={styles.container_tres}>
                     <div className={styles.icon}>
                         <FaCode size={30} />
@@ -59,7 +67,7 @@ const About = () => {
                 <h6>Total de Projetos</h6>
                 <p>Soluções web inovadoras. </p>
             </div>
-            <div className={styles.card}>
+            <div data-aos="fade-up" data-aos-duration="1400" className={styles.card}>
                 <div className={styles.container_tres}>
                     <div className={styles.icon}>
                         <GrCertificate size={30} />
@@ -69,7 +77,7 @@ const About = () => {
                 <h6>Certificados</h6>
                 <p>Validação de habilidades profissionais. </p>
             </div>
-            <div className={styles.card}>
+            <div data-aos="fade-left" data-aos-duration="1400" className={styles.card}>
                 <div className={styles.container_tres}>
                     <div className={styles.icon}>
                         <MdOutlineLanguage size={30} />
