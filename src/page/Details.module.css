@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'BR Segma', sans-serif;
+  margin-bottom: 10rem;
 }
 
 .intro {    
@@ -275,6 +276,9 @@ h4 {
 }
 
 @media (max-width: 1300px) {
+  .main_container {
+  margin-bottom: 0;
+}
   .container {
     grid-template-columns: 1fr; /* vira 1 coluna */
     flex-direction: column;
