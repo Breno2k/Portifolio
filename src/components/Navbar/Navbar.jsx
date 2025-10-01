@@ -1,18 +1,59 @@
 import styles from './Navbar.module.css'
 
+import { useState } from 'react';
+
 const Navbar = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+
     return (
-        <nav id="mainNav" className={`${styles.nav} navbar`}>
-            <span><a href="#home">Breno</a></span>
-            <ul className="nav">
-                <li className="nav-item">
-                    <a className={`nav-link ${styles.navLink}`} href="#home">Home</a>
+        <nav className={styles.navbar}>
+            <a href="#home" className={styles.navbarBrand}>Breno</a>
+
+            <button
+                className={`${styles.menuToggle} ${isOpen ? styles.active : ''}`}
+                onClick={toggleMenu}
+                aria-label="Toggle menu"
+            >
+                <div className={styles.hamburger}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <ul className={`${styles.navMenu} ${isOpen ? styles.active : ''}`}>
+                <li>
+                    <a
+                        className={styles.navLink}
+                        href="#home"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Home
+                    </a>
                 </li>
-                <li className="nav-item">
-                    <a className={`nav-link ${styles.navLink}`} href="#about">Sobre mim</a>
+                <li>
+                    <a
+                        className={styles.navLink}
+                        href="#about"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Sobre mim
+                    </a>
                 </li>
-                <li className="nav-item">
-                    <a className={`nav-link ${styles.navLink}`} href="#project">Projetos e Competências</a>
+                <li>
+                    <a
+                        className={styles.navLink}
+                        href="#project"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Projetos e Competências
+                    </a>
                 </li>
             </ul>
         </nav>
