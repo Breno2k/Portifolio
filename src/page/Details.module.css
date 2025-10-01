@@ -3,10 +3,11 @@
 
 .main_container {
   margin-top: 20px;
-  margin-left: 8em;
-  margin-right: 8em;
+  margin-left: clamp(0.4rem, 4vw, 15em);
+  margin-right: clamp(0.4rem, 4vw, 15em);
+  position: relative;
+  z-index: 1;
   display: flex;
-  height: 87vh; 
   flex-direction: column;
   font-family: 'BR Segma', sans-serif;
 }
@@ -46,14 +47,21 @@ button::after {
 
 .container {
   margin-top: 40px;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr; /* duas colunas iguais */
   gap: 20px;
   width: 100%;
 }
 
+
+
 .item {
   color: #fff;
+}
+
+.item h1 {
+  font-family: 'Dortmund', sans-serif;
+  font-size: clamp(2rem, 3.4vw, 3.9rem);
 }
 
 .item p, li {
@@ -101,11 +109,6 @@ button::after {
   border-color: #5141e2;
 }
 
-h1 {
-  font-family: 'Dortmund', sans-serif;
-  font-size: 2.4vw;
-}
-
 h4 {
   font-family: 'Dortmund', sans-serif;
   font-size: 20px;
@@ -118,38 +121,35 @@ h4 {
   display: flex;
   flex-direction: row;
   margin-bottom: 25px;
+  gap: 10px;  
+  flex-wrap: wrap;     
 }
 
-.btn_grad_um {background-image: linear-gradient(to right, #4568DC 0%, #B06AB3  51%, #4568DC  100%)}
+.btn_grad_um, .btn_grad_dois {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 10px;
+  flex: 1 1 auto;       
+  min-width: 150px;     
+}
+
+/* Gradientes */
 .btn_grad_um {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   border-radius: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 5px
- }
-.btn_grad_dois {background-image: linear-gradient(to right, #B24592 0%, #F15F79  51%, #B24592  100%)}
+  background-image: linear-gradient(to right, #4568DC 0%, #B06AB3 51%, #4568DC 100%);
+}
+
 .btn_grad_dois {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   border-radius: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 5px
- }
+  background-image: linear-gradient(to right, #B24592 0%, #F15F79 51%, #B24592 100%);
+}
          
 
 .btn_grad_um:hover, .btn_grad_dois:hover {
@@ -158,25 +158,46 @@ h4 {
    text-decoration: none;
  }
 
- .wrapper {
+.wrapper {
   width: 100%;
   padding: 10px;
   background-color: rgba(78, 3, 148, 0.5);
   border-radius: 8px;   
-  margin: 25px 0 25px 0;
+  margin: 25px 0;
 }
 
-.total_Tech, .total_Features {
+.cards {
+  display: flex; 
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: wrap; /* permite encolher os cards sem quebrar layout */
+}
+
+/* Cada card ocupa metade do espaço disponível */
+.total_Tech,
+.total_Features {
   display: flex;
   align-items: center;
+  gap: 10px;
   height: 5rem;
-  width: 100%;
-  gap: 5px;
+  flex: 1 1 45%; /* grow, shrink, basis */
   background-color: #33006F;
   border-radius: 10px;
   padding: 10px;
-  transition: transform 0.3s ease;
   border: 1px solid;
+  transition: transform 0.3s ease;
+}
+
+/* Ícone dentro do card */
+.icon {
+  width: 3.1em;
+  height: 3.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .total_Tech {
@@ -205,23 +226,6 @@ h4 {
   flex-direction: column; /* empilha h3 e p */
 }
 
-.cards {
-  display: flex; 
-  flex-direction: row;
-  width: 100%;
-  align-items: stretch;
-  gap: 20px;
-}
-
-.icon {
-  width: 3.1em;
-  height: 3.1em;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-}
-
 .total_Tech .icon {
   background-color: #4b2bb0;
 }
@@ -235,23 +239,23 @@ h4 {
   border: 1px solid #494949;
   padding: 15px;
   border-radius: 15px;
-  align-items: center;
 }
-
-
 .features ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .features ul li {
-  position: relative;
-  margin: 15px;
-  padding: 10px 10px 10px 30px;
+  display: flex;           /* flex row: bullet + texto */
+  flex-direction: row;     
+  align-items: flex-start; /* vertical topo */
+  justify-content: flex-start; /* horizontal esquerda */
+  gap: 10px;               /* espaço entre bullet e texto */
+  margin-bottom: 15px;     /* espaço entre itens */
+  padding: 10px;           /* padding interno do li */
   border-radius: 10px;
   border: 1px solid transparent;
-  display: flex;
-  align-items: center;
   transition: background-color 0.3s ease;
 }
 
@@ -262,10 +266,37 @@ h4 {
 
 .features ul li::before {
   content: "•";
-  position: absolute;
-  left: 10px;
   font-size: 1.6rem;
   background: linear-gradient(45deg, #f390fa, #741eff);
   -webkit-background-clip: text;
   color: transparent;
+  display: inline-block;   /* participa do fluxo */
+  line-height: 1;          /* evita desalinhamento vertical */
+}
+
+@media (max-width: 1300px) {
+  .container {
+    grid-template-columns: 1fr; /* vira 1 coluna */
+    flex-direction: column;
+  }
+  .container .item:nth-of-type(2) {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn_grad_um,
+  .btn_grad_dois {
+    padding: 12px 30px;
+    font-size: 0.9rem;  /* diminui o texto */
+  }
+}
+
+@media (max-width: 600px) {
+  .btn_grad_um,
+  .btn_grad_dois {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
 }

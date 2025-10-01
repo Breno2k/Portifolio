@@ -47,7 +47,7 @@ const Details = () => {
                                 </div>
                                 <div className={styles.texts}>
                                     <h3>{tech.length}</h3>
-                                    <p>Total Technologies</p>
+                                    <p>All technologies</p>
                                 </div>
                             </div>
                             <div className={styles.total_Features}>
@@ -56,7 +56,7 @@ const Details = () => {
                                 </div>
                                 <div className={styles.texts}>
                                     <h3>{caracteristicas.length}</h3>
-                                    <p>Total Caracteristivcas</p>
+                                    <p>Key Features</p>
                                 </div>
                             </div>
                         </div>

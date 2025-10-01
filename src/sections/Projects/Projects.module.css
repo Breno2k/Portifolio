@@ -2,26 +2,42 @@
 @import url('https://fonts.cdnfonts.com/css/br-segma');
 @import url('https://fonts.cdnfonts.com/css/rem');
 
+.projects {
+  padding-top: 40px;
+}
+
 .intro {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 40em;
+
     margin: 0 auto;
     margin-bottom: 25px;
-    padding-top: 80px;
+    margin-top: 80px;
+
+      flex: 1 1 300px;  /* grow shrink basis */
+  min-width: 0;    /* ESSENCIAL: permite que o flex item encolha e o texto quebre */
+  max-width: 45em;
 }
 
 .intro h1 {
   font-family: 'Dortmund', sans-serif;
   color: #8A2BE2;
+  font-size: 3rem;
 } 
 
 .intro p {
   font-family: 'BR Segma', sans-serif;
   color: #A9A9A9;
+  font-size: clamp(14px, 2vw, 17px); /* responsivo */
+  line-height: 1.6;
+  max-width: 60ch; /* opcional para leitura */
+  margin: 0;       /* remova o margin:auto se estiver dentro de flex */
+  white-space: normal;           /* permite quebra */
+  overflow-wrap: anywhere;       /* quebra palavras longas / URLs */
+  word-break: break-word; 
 }
 
 .wrapper {
@@ -42,22 +58,20 @@
 
 .img_wrapper {
   width: 100%;
-  height: 14rem;         /* altura fixa para todas imagens */
-  overflow: hidden;      /* corta excesso da imagem */
-  border-radius: 10px;   /* opcional, arredondar cantos */
+  height: 14rem;           /* altura fixa */
+  overflow: hidden;        /* corta o que passar */
+  border-radius: 10px;
 }
 
 .card_img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;     /* mantém proporção e preenche o container */
-  display: block;
+  height: 100%;            /* ocupa toda a altura do wrapper */
+  object-fit: cover;       /* preenche o espaço sem sobras */
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .img_wrapper:hover .card_img {
-  transform: scale(1.05); /* zoom leve */
-  /* Se quiser, pode adicionar glow: filter: drop-shadow(...) */
+  transform: scale(1.05); 
 }
 
 .container {
@@ -126,6 +140,15 @@
 
 .cert:hover {
   transform: translateY(-2px);
+}
+
+.cards_container_cards {
+  font-family: 'REM', sans-serif;
+  display: grid; 
+  width: 100%;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+  gap: 20px;
 }
 
 .card_projects {
@@ -228,4 +251,41 @@ button::after {
           drop-shadow(2px -1px 3px #80C7FF);
   transition: filter 0.3s ease;
   transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 1300px) {
+  .cards_container_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .cards_container_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .card h5 {
+    font-size: 0.8rem;
+  }
+  .card_svg h4 {
+    font-size: 1rem;
+  }
+  .card_svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+.card_svg:hover {
+  transform: scale(1.06);
+}
+
+.svg_image {
+  width: 3rem;
+  height: 3rem;
+}
 }

@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/br-segma');
 
 .about {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 80px;
 }
 
@@ -20,8 +20,8 @@ p {
 
 .intro h1 {
     font-family: 'Dortmund', sans-serif;
-    font-size: 3vw;
-    size: bold;
+    font-size: 3rem;
+    font-size: bold;
 }
 
 .intro p {
@@ -32,10 +32,10 @@ p {
   font-size: 18px;
 }
 
-.intro h1, span {
+.intro h1, 
+.intro span {
     font-family: 'Dortmund', sans-serif;
     color: #8A2BE2;
-    background-color: var(--color-text);
     text-align: center;
 }
 
@@ -43,14 +43,22 @@ p {
     display: flex;
     align-items: center;
     justify-content:space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .apresentacao {
-    width: 45em;
+      /* substitui width fixa por flex-basis + capacidade de encolher/crescer */
+  flex: 1 1 300px;  /* grow shrink basis */
+  min-width: 0;    /* ESSENCIAL: permite que o flex item encolha e o texto quebre */
+  max-width: 45em; /* opcional: limita largura máxima */
+  box-sizing: border-box;
     
 }
 
-h1 {
+.apresentacao h1 {
+    font-family: 'Dortmund', sans-serif;
+    font-size: 2rem;
     color: #fff;
 }
 
@@ -62,11 +70,18 @@ h1 {
 
 .apresentacao span {
     color: #8A2BE2;
+    font-size: 2rem;
 }
 
 .apresentacao p {
-    color: #A9A9A9;
-    font-size: 17px;
+  color: #A9A9A9;
+  font-size: clamp(14px, 2vw, 17px); /* responsivo */
+  line-height: 1.6;
+  max-width: 60ch; /* opcional para leitura */
+  margin: 0;       /* remova o margin:auto se estiver dentro de flex */
+  white-space: normal;           /* permite quebra */
+  overflow-wrap: anywhere;       /* quebra palavras longas / URLs */
+  word-break: break-word; 
 }
 
 p span {
@@ -202,4 +217,35 @@ p span {
     align-items: center;
     justify-content: space-between;
     /* margin-bottom: -1.3rem; */
+}
+
+.container_tres h1 {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .intro p {
+        text-align: center;
+    }
+    .intro h1 {
+        font-size: 2rem;
+    }
+    .apresentacao h1 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .container_dois {
+        flex-direction: column;
+    }
+    .btn_grad, .btn_grad_two {
+        width: 100%;
+        justify-content: center;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 5px
+    }
 }

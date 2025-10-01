@@ -59,9 +59,11 @@ const Projects = () => {
         <div className={styles.projects}>
             <div className={styles.intro}>
                 <h1 data-aos="fade-up">Portifolio Shocase</h1>
-                <p data-aos="fade-up" data-aos-duration="1100">Explore minha jornada através de projetos,
+                <p data-aos="fade-up" data-aos-duration="1100">
+                    Explore minha jornada através de projetos,
                     certificações e conhecimento técnico. Cada seção
-                    representa um marco em meu caminho de aprendizado contínuo.</p>
+                    representa um marco em meu caminho de aprendizado contínuo.
+                </p>
             </div>
             <div className={styles.wrapper}>
                 <div className={styles.cards_container} >
@@ -81,12 +83,12 @@ const Projects = () => {
                         <NavProject
                             active={navProject === "skills"}
                             icon={<BsBoxes size={25} />}
-                            title="Linguagens de Programação" />
+                            title="Tech Stack" />
                     </div>
                 </div>
             </div>
 
-            <div id="projects" className={styles.cards_container}>
+            <div id="projects" className={styles.cards_container_cards}>
                 {navProject === "projetos" && (
                     <>
                         <CardsProjects

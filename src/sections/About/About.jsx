@@ -28,7 +28,9 @@ const About = () => {
         </div>
         <div className={styles.container}>
             <div className={styles.apresentacao}>
-                <h1 data-aos="fade-right" data-aos-duration="1400"><span>Olá, eu sou</span><br /> Breno Lucas Souza de Albuquerque Melo</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1400">
+                    <span>Olá, eu sou</span><br /> Breno Lucas Souza de Albuquerque Melo
+                </h1>
                 <p data-aos="fade-right" data-aos-duration="1600">Sou graduado em Análise e
                     Desenvolvimento de Sistemas e já
                     atuei como desenvolvedor de
