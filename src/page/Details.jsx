@@ -30,9 +30,9 @@ const Details = () => {
         <div className={styles.main_container}>
             <div className={styles.intro}>
                 <HashLink smooth to="/#projects">
-                    <button> <GoArrowLeft /> Back</button>
+                    <button> <GoArrowLeft /> Voltar</button>
                 </HashLink>
-                <p>Projects <IoIosArrowForward /> <span>{title}</span></p>
+                <p>Projetos <IoIosArrowForward /> <span>{title}</span></p>
             </div>
             <div className={styles.container}>
                 <div data-aos="fade-right" className={styles.item}>
@@ -47,7 +47,7 @@ const Details = () => {
                                 </div>
                                 <div className={styles.texts}>
                                     <h3>{tech.length}</h3>
-                                    <p>All technologies</p>
+                                    <p>Tecnologias</p>
                                 </div>
                             </div>
                             <div className={styles.total_Features}>
@@ -56,7 +56,7 @@ const Details = () => {
                                 </div>
                                 <div className={styles.texts}>
                                     <h3>{caracteristicas.length}</h3>
-                                    <p>Key Features</p>
+                                    <p>Características</p>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ const Details = () => {
                         <a className={styles.btn_grad_um} href={deploy}><BsBoxArrowUpRight /> Live Demo</a>
                         <a className={styles.btn_grad_dois} href={github}><FaGithub /> Github</a>
                     </div>
-                    <h4><FaCode size={20} /> Technologies Used</h4>
+                    <h4><FaCode size={20} /> Tecnologias Utilizadas</h4>
                     <div className={styles.tech}>
                         {tech && tech.map((tech, index) =>
                             <p key={index}><IoIosCode size={20} /> {tech}</p>
@@ -75,7 +75,7 @@ const Details = () => {
                 <div data-aos="fade-left" className={styles.item}>
                     <img src={img} alt="imagem do projeto" />
                     <div className={styles.features}>
-                        <h4><FaRegStar color="yellow" size={20} /> Key Features</h4>
+                        <h4><FaRegStar color="yellow" size={20} /> Principais Características</h4>
                         <ul>
                             {caracteristicas && caracteristicas.map((caracteristicas, index) =>
                                 <li key={index}>{caracteristicas}</li>

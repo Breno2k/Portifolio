@@ -27,7 +27,7 @@ const CardsProjects = ({ title, deploy, description, img, tech, github, caracter
                 <h5 className="card-title">{title}</h5>
                 <p className={`${styles.limite} card-text`}>{description}</p>
                 <div className={styles.details}>
-                    <a href="#">Live Demo <FaExternalLinkAlt /></a>
+                    <a href={deploy}>Live Demo <FaExternalLinkAlt /></a>
                     <button onClick={() => navigate("/details",
                         { state: { title, deploy, description, img, tech, github, caracteristicas } })
                     }>Details <GoArrowRight />

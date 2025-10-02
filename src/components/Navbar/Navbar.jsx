@@ -34,7 +34,7 @@ const Navbar = () => {
                         href="#home"
                         onClick={() => setIsOpen(false)}
                     >
-                        Home
+                        Início
                     </a>
                 </li>
                 <li>
