@@ -83,7 +83,7 @@ const Projects = () => {
                         <NavProject
                             active={navProject === "skills"}
                             icon={<BsBoxes size={25} />}
-                            title="Tech Stack" />
+                            title="Tecnologias" />
                     </div>
                 </div>
             </div>
@@ -116,13 +116,13 @@ const Projects = () => {
                             caracteristicas={["Cardápio estruturado com filtros.", "Acompanhamento de status de preparação.", "Sistema de carrinho.", "Validação de CPF."]}
                             deploy="https://toten-donalds.vercel.app/fsw-donalds" />
                         <CardsProjects
-                            title="Clumsy Bird"
+                            title="Eco Fly"
                             description="Criei minha própria versão personalizada do Clumsy Bird, alterando o pássaro, o fundo, os canos e outros elementos para deixar o jogo com a minha cara."
                             img={img4}
                             tech={["JavaScript", "HTML", "CSS"]}
-                            github="https://github.com/Breno2k/clumsy-bird-master"
-                            caracteristicas={["Customizable Assets", "Animated Bird", "Dynamic Obstacles", "Interactive Feedback"]}
-                            deploy="ellisonleao.github.io/clumsy-bird/" />
+                            github="https://github.com/Breno2k/Eco-Fly"
+                            caracteristicas={["Itens animados", "Obstáculos dinâmicos", "Feedback interativo", "Jogo 2D para navegador"]}
+                            deploy="https://breno2k.github.io/Eco-Fly/" />
                         <CardsProjects
                             title="Central Pet"
                             description="Central Pet é um site que cuida do seu pet, capaz de armazenar cartões de vacina e marcar consultas online com veterinários"
