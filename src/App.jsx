@@ -15,6 +15,7 @@ import Iridescence from './components/React Bits/Iridescente'
 // Pages
 import Details from './page/Details';
 
+
 function App() {
 
 
@@ -27,7 +28,6 @@ function App() {
         speed={1.0}
       />
       <div className="main-container">
-
         <Routes>
           <Route path='/'
             element={

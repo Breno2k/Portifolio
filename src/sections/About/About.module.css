@@ -245,6 +245,7 @@ p span {
         justify-content: center;
     }
     .buttons {
+        padding-top: 20px;
         flex-direction: column;
         gap: 5px
     }

@@ -17,6 +17,7 @@ import { FaGithub } from "react-icons/fa6";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { BsStack } from "react-icons/bs";
 import { IoIosCode } from "react-icons/io";
+import ScrollToTop from '../components/ScrollToTop';
 
 const Details = () => {
 
@@ -27,65 +28,69 @@ const Details = () => {
     const { title, deploy, description, img, tech, github, caracteristicas } = location.state || {};
 
     return (
-        <div className={styles.main_container}>
-            <div className={styles.intro}>
-                <HashLink smooth to="/#projects">
-                    <button> <GoArrowLeft /> Voltar</button>
-                </HashLink>
-                <p>Projetos <IoIosArrowForward /> <span>{title}</span></p>
-            </div>
-            <div className={styles.container}>
-                <div data-aos="fade-right" className={styles.item}>
-                    <h1>{title}</h1>
-                    <div className={styles.hr} ></div>
-                    <p>{description}</p>
-                    <div className={styles.wrapper}>
-                        <div className={styles.cards}>
-                            <div className={styles.total_Tech}>
-                                <div className={styles.icon}>
-                                    <FaCode color="#6d46fd" size={20} />
+        <>
+            <ScrollToTop />
+            <div className={styles.main_container}>
+                <div className={styles.intro}>
+                    <HashLink smooth to="/#projects">
+                        <button> <GoArrowLeft /> Voltar</button>
+                    </HashLink>
+                    <p>Projetos <IoIosArrowForward /> <span>{title}</span></p>
+                </div>
+                <div className={styles.container}>
+                    <div data-aos="fade-right" className={styles.item}>
+                        <h1>{title}</h1>
+                        <div className={styles.hr} ></div>
+                        <p>{description}</p>
+                        <div className={styles.wrapper}>
+                            <div className={styles.cards}>
+                                <div className={styles.total_Tech}>
+                                    <div className={styles.icon}>
+                                        <FaCode color="#6d46fd" size={20} />
+                                    </div>
+                                    <div className={styles.texts}>
+                                        <h3>{tech.length}</h3>
+                                        <p>Tecnologias</p>
+                                    </div>
                                 </div>
-                                <div className={styles.texts}>
-                                    <h3>{tech.length}</h3>
-                                    <p>Tecnologias</p>
-                                </div>
-                            </div>
-                            <div className={styles.total_Features}>
-                                <div className={styles.icon}>
-                                    <BsStack color="#f390fa" size={20} />
-                                </div>
-                                <div className={styles.texts}>
-                                    <h3>{caracteristicas.length}</h3>
-                                    <p>Características</p>
+                                <div className={styles.total_Features}>
+                                    <div className={styles.icon}>
+                                        <BsStack color="#f390fa" size={20} />
+                                    </div>
+                                    <div className={styles.texts}>
+                                        <h3>{caracteristicas.length}</h3>
+                                        <p>Características</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.btn}>
-                        <a className={styles.btn_grad_um} href={deploy}><BsBoxArrowUpRight /> Live Demo</a>
-                        <a className={styles.btn_grad_dois} href={github}><FaGithub /> Github</a>
-                    </div>
-                    <h4><FaCode size={20} /> Tecnologias Utilizadas</h4>
-                    <div className={styles.tech}>
-                        {tech && tech.map((tech, index) =>
-                            <p key={index}><IoIosCode size={20} /> {tech}</p>
-                        )}
-                    </div>
-                </div>
-                <div data-aos="fade-left" className={styles.item}>
-                    <img src={img} alt="imagem do projeto" />
-                    <div className={styles.features}>
-                        <h4><FaRegStar color="yellow" size={20} /> Principais Características</h4>
-                        <ul>
-                            {caracteristicas && caracteristicas.map((caracteristicas, index) =>
-                                <li key={index}>{caracteristicas}</li>
-
+                        <div className={styles.btn}>
+                            <a className={styles.btn_grad_um} href={deploy}><BsBoxArrowUpRight /> Live Demo</a>
+                            <a className={styles.btn_grad_dois} href={github}><FaGithub /> Github</a>
+                        </div>
+                        <h4><FaCode size={20} /> Tecnologias Utilizadas</h4>
+                        <div className={styles.tech}>
+                            {tech && tech.map((tech, index) =>
+                                <p key={index}><IoIosCode size={20} /> {tech}</p>
                             )}
-                        </ul>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" className={styles.item}>
+                        <img src={img} alt="imagem do projeto" />
+                        <div className={styles.features}>
+                            <h4><FaRegStar color="yellow" size={20} /> Principais Características</h4>
+                            <ul>
+                                {caracteristicas && caracteristicas.map((caracteristicas, index) =>
+                                    <li key={index}>{caracteristicas}</li>
+
+                                )}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div >
+            </div >
+        </>
+
     )
 }
 

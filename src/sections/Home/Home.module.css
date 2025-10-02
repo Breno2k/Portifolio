@@ -78,6 +78,7 @@ img {
 
 @media (max-width: 768px) {
   .home {
+    padding-top: 80px;
     flex-direction: column; 
     height: auto;
   }
