@@ -49,7 +49,7 @@ const About = () => {
             </div>
         </div>
         <div data-aos="fade-right" data-aos-duration="1600" className={styles.buttons}>
-            <Link to="https://drive.google.com/file/d/1q3A4loM1D5hKrmFOj8hCXmwYOAB2Tzkx/view?usp=sharing" className={styles.btn_grad}>
+            <Link to="https://drive.google.com/file/d/1lvgf4VX0UCY8hwQ8VkZVageUfVSHPkIn/view?usp=sharing" className={styles.btn_grad}>
                 <BsFileEarmarkTextFill />
                 <strong> Acessar CV</strong>
             </Link>
