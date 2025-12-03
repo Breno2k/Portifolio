@@ -14,6 +14,7 @@ import Iridescence from './components/React Bits/Iridescente'
 
 // Pages
 import Details from './page/Details';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -56,9 +57,7 @@ function App() {
         </Routes>
 
       </div>
-      <footer>
-        <h6>© 2025 Breno Melo. Todos os direitos reservados.</h6>
-      </footer>
+      <Footer />
 
     </>
   )
