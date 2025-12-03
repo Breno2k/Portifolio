@@ -9,6 +9,7 @@ import img2 from '../../assets/imagens/central_pet.png'
 import img3 from '../../assets/imagens/toten.png'
 import img4 from '../../assets/imagens/flappy_bird.png'
 import img5 from '../../assets/imagens/mystery_word.png'
+import img6 from '../../assets/imagens/cine_api.png'
 import cert1 from '../../assets/imagens/cert1.jpg'
 import cert2 from '../../assets/imagens/cert2.jpg'
 import cert3 from '../../assets/imagens/cert3.jpg'
@@ -123,6 +124,14 @@ const Projects = () => {
                             github="https://github.com/Breno2k/Eco-Fly"
                             caracteristicas={["Itens animados", "Obstáculos dinâmicos", "Feedback interativo", "Jogo 2D para navegador"]}
                             deploy="https://breno2k.github.io/Eco-Fly/" />
+                        <CardsProjects
+                            title="CineAPI"
+                            description="Uma plataforma que reúne dados detalhados sobre filmes, incluindo nota de avaliação, tempo de duração, orçamento investido e receita arrecadada. Tudo em um só lugar, para você explorar, comparar e conhecer melhor suas produções favoritas."
+                            img={img6}
+                            tech={["HTML", "CSS Modules", "JavaScript", "React", "React Router", "API do TMDB", "Hooks"]}
+                            github="https://github.com/Breno2k/CineAPI"
+                            caracteristicas={["Sistema de pesqueisa", "Design interativo", "Requisições do tipo GET"]}
+                            deploy="https://cine-api-two.vercel.app/" />
                         <CardsProjects
                             title="Central Pet"
                             description="Central Pet é um site que cuida do seu pet, capaz de armazenar cartões de vacina e marcar consultas online com veterinários"
