@@ -65,7 +65,7 @@ const About = () => {
                         <div className={styles.icon}>
                             <FaCode size={30} />
                         </div>
-                        <h1>5</h1>
+                        <h1>6</h1>
                     </div>
                     <h6>Total de Projetos</h6>
                     <p>Soluções web inovadoras. </p>
